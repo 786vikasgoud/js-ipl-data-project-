@@ -1,4 +1,7 @@
 function highestPlayerOfTheMatch(matches) {
+  if (matches === null) {
+    return null;
+  }
   let arr = matches.reduce(function (accu, element) {
     if (accu[element.season] === undefined) {
       accu[element.season] = {};

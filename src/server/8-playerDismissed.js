@@ -1,4 +1,5 @@
 function playerDismissed(deliveries) {
+  if (deliveries === null) return null;
   let result = deliveries.reduce(function (accu, element) {
     if (element.player_dismissed !== "") {
       if (accu[element.player_dismissed] === undefined) {

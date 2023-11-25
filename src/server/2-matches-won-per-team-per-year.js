@@ -1,4 +1,5 @@
 function numberOfMatchesWon(matches) {
+  if (matches === null) return null;
   let result = matches.reduce(function (accu, element) {
     if (accu[element.season] === undefined) {
       accu[element.season] = {};

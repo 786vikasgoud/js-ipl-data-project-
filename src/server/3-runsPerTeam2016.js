@@ -1,5 +1,6 @@
 let array = [];
 function runs(matches, deliveries) {
+  if (matches === null || deliveries === null) return null;
   matches
     .filter(function (elements) {
       return elements.season === "2016";
@@ -7,9 +8,8 @@ function runs(matches, deliveries) {
     .map(function (element) {
       array.push(element.id);
     });
-  //console.log(typeof deliveries.match_id);
 
-  return deliveries.reduce(function (accu, element) {
+  let output = deliveries.reduce(function (accu, element) {
     if (array.includes(element.match_id)) {
       if (accu[element.batting_team] === undefined) {
         accu[element.batting_team] = 0;
@@ -20,6 +20,7 @@ function runs(matches, deliveries) {
     }
     return accu;
   }, {});
+  return output;
 }
 
 module.exports = runs;
