@@ -1,5 +1,4 @@
 function playerDismissed(deliveries) {
-  if (deliveries === null) return null;
   let result = deliveries.reduce(function (accu, element) {
     if (element.player_dismissed !== "") {
       if (accu[element.player_dismissed] === undefined) {
@@ -30,9 +29,6 @@ function playerDismissed(deliveries) {
       return b[1] - a[1];
     });
     //return arr;
-    if (accu[element[0]] === undefined) {
-      accu[element[0]] = {};
-    }
     accu[element[0]] = arr[0];
     return accu;
   }, {});

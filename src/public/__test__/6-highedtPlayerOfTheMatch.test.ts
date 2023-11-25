@@ -13,6 +13,7 @@ describe("highestPlayerOfTheMatch", function () {
   test("excuating the values", function () {
     const input = [
       { season: "2022", player_of_match: "kohli" },
+      { season: "2022", player_of_match: "dhoni" },
       { season: "2019", player_of_match: "dhoni" },
       { season: "2022", player_of_match: "kohli" },
       { season: "2019", player_of_match: "dhoni" },

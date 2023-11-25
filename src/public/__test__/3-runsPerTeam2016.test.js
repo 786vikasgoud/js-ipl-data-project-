@@ -27,14 +27,12 @@ describe("runsPerTeam2016", function () {
       { match_id: 5, extra_runs: 23, batting_team: "Delhi Daredevils" },
       { match_id: 6, extra_runs: 12, batting_team: "Pune Supergiants" },
       { match_id: 7, extra_runs: 13, batting_team: "rising Pun" },
+      { match_id: 1, extra_runs: 2, batting_team: "Mumbai Indians" },
     ];
     const output = {
-      "Mumbai Indians": 8,
+      "Mumbai Indians": 10,
       "Rising Pune Supergiants": 22,
       "Delhi Daredevils": 20,
-      "Delhi Daredevils": 0,
-      "Mumbai Indians": 0,
-      "Rising Pune Supergiants": 0,
     };
     const result = runsPerTeam2016(input1, input2);
     expect(result).toEqual(output);

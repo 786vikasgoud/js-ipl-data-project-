@@ -12,10 +12,9 @@ function runs(matches, deliveries) {
   let output = deliveries.reduce(function (accu, element) {
     if (array.includes(element.match_id)) {
       if (accu[element.batting_team] === undefined) {
-        accu[element.batting_team] = 0;
+        accu[element.batting_team] = Number(element.extra_runs);
       } else {
-        accu[element.batting_team] =
-          accu[element.batting_team] + Number(element.extra_runs);
+        accu[element.batting_team] += Number(element.extra_runs);
       }
     }
     return accu;

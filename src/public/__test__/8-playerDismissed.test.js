@@ -9,6 +9,12 @@ describe("playerDismissed", function () {
         bowler: "shami",
       },
       {
+        player_dismissed: "warner",
+        dismissal_kind: "run out",
+        fielder: "kohli",
+        bowler: "shami",
+      },
+      {
         player_dismissed: "miller",
         dismissal_kind: "lbw",
         fielder: "",
@@ -32,8 +38,14 @@ describe("playerDismissed", function () {
         fielder: "",
         bowler: "kohli",
       },
+      {
+        player_dismissed: "warner",
+        dismissal_kind: "wicket",
+        fielder: "",
+        bowler: "bhuvi",
+      },
     ];
     const output = playerDismissed(input);
-    expect(output).toEqual(["warner", ["kohli", 2]]);
+    expect(output).toEqual(["warner", ["kohli", 3]]);
   });
 });
