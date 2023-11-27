@@ -3,10 +3,10 @@ const csv = require("csvtojson");
 const fs = require("fs");
 csv()
   .fromFile(csvFilePath)
-  .then((jsonObj) => {
+  .then((data) => {
     fs.writeFileSync(
       "/home/vikas/Desktop/IPLDataProject1/matches.json",
-      JSON.stringify(jsonObj),
+      JSON.stringify(data),
       "utf-8",
       (err) => {
         console.log(err);
@@ -18,10 +18,10 @@ const csvFilePath1 =
   "/home/vikas/Desktop/IPLDataProject1/src/data/deliveries.csv";
 csv()
   .fromFile(csvFilePath1)
-  .then((jsonObj) => {
+  .then((data) => {
     fs.writeFileSync(
       "/home/vikas/Desktop/IPLDataProject1/deliveries.json",
-      JSON.stringify(jsonObj),
+      JSON.stringify(data),
       "utf-8",
       (err) => {
         console.log(err);
