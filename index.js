@@ -8,8 +8,8 @@ csv()
       "/home/vikas/Desktop/IPLDataProject1/matches.json",
       JSON.stringify(jsonObj),
       "utf-8",
-      (obj) => {
-        console.log(obj);
+      (err) => {
+        console.log(err);
       }
     );
   });
@@ -23,8 +23,8 @@ csv()
       "/home/vikas/Desktop/IPLDataProject1/deliveries.json",
       JSON.stringify(jsonObj),
       "utf-8",
-      (obj) => {
-        console.log(obj);
+      (err) => {
+        console.log(err);
       }
     );
   });
